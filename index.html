@@ -3,19 +3,36 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/main.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="./Images/UI/Logo.ico">
         <title>Bee's n' key's</title>
     </head>
     <body>
         <header>
             <nav>
-                <img src="./Images/UI/Logo.png" alt="BZZ" width="45" height="45">
+                <img src="./Images/UI/Logo.png" id="logo" alt="BZZ" width="45" height="45">
+                <div id="bzz"><span>Bzzzzz...</span></div>
                 <a href="index.html" id="current">Domicile</a>
                 <a href="products.html">Des produits</a>
                 <a href="#footer">Contact</a>
                 <a href="about.html">A propos de nous</a>
+                <script>
+                    $('#logo').click(function(e) {
+                        e.preventDefault();
+                        $('#bzz').css({'display': 'flex'});
+                        $('#bzz').fadeIn(500);
+                        setTimeout(function(){
+                            $('#bzz').fadeOut(500);
+                        }, 3000);
+                    });
+                </script>
             </nav>
         </header>
-        <main></main>
+        <main>
+            <div class="screen">
+                <img src="./Images/HomeScreen.jpg">
+                <h3>Bienvenue dans notre ferme de porte-clés d'abeilles</h3>
+            </div>
+        </main>
     </body>
 </html>
