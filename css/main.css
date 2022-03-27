@@ -10,16 +10,27 @@ header{
     justify-content: center;
 }
 nav{
-    margin: 10px;
-    width: 90%;
+    padding: 20px;
+    width: 100%;
     position: fixed;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    transition: all 0.6s;
+    z-index: 9998;
+}
+nav.scrolled{
+    padding: 5px;
+    background: rgb(255, 68, 0);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
 nav img{
+    margin-left: 20px;
     margin-right: auto;
+    cursor: pointer;
 }
 nav img:hover{
     animation: bee 0.5s infinite;
@@ -48,7 +59,6 @@ nav > a{
     transition: all 0.2s;
 }
 nav > a:hover{
-    background: orangered;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
     inset 2px 2px 5px rgba(0, 0, 0, 0.3),
     inset -2px -2px 5px rgba(255, 255, 255, 0.3);
@@ -78,9 +88,10 @@ nav > a:hover{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    max-height: 90vh;
     text-align: center;
     color: white;
+    z-index: 1;
 }
 .screen h3{
     position: absolute;
@@ -92,4 +103,110 @@ nav > a:hover{
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: rgb(255, 223, 174);
+}
+.productsList{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.product{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: rgb(255, 153, 0);
+    border-radius: 50px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+.product > img{
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.product span{
+    max-width: 400px;
+}
+.order{
+    padding: 10px;
+    color: white;
+    background: rgb(180, 0, 0);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    transition: all 0.2s;
+}
+.order:hover{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+.popupBG{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.541);
+    z-index: 9999;
+}
+.orderPopup{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background:rgb(255, 68, 0);
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+#footerVerticals{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#footerVerticals > ul{
+    margin: 20px;
+    list-style: none;
+}
+#footerVerticals > ul > li > a{
+    color: white;
+}
+#footerVerticals > ul > li > a:hover{
+    text-decoration: underline;
+}
+#socialLinks > a{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+footer span{
+    color: white;
+    font-style: italic;
+    font-size: 12px;
 }

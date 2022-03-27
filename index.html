@@ -8,6 +8,18 @@
         <title>Bee's n' key's</title>
     </head>
     <body>
+        <div class="popupBG">
+            <div class="orderPopup">
+                <form action="post">
+                    <h3>Commander un porte-clés</h3>
+                    <input type="text" placeholder="Votre e-mail">
+                    <input type="text" placeholder="Votre numéro de téléphone">
+                    <input type="text" placeholder="Votre adresse">
+                    <input type="text" placeholder="Code postal">
+                    <input type="submit" value="Vérifier">
+                </form>
+            </div>
+        </div>
         <header>
             <nav>
                 <img src="./Images/UI/Logo.png" id="logo" alt="BZZ" width="45" height="45">
@@ -26,6 +38,12 @@
                         }, 3000);
                     });
                 </script>
+                <script>
+                    window.addEventListener("scroll", function(){
+                        var nav = document.querySelector("nav");
+                        nav.classList.toggle("scrolled", window.scrollY > 0);
+                    });
+                </script>
             </nav>
         </header>
         <main>
@@ -33,6 +51,65 @@
                 <img src="./Images/HomeScreen.jpg">
                 <h3>Bienvenue dans notre ferme de porte-clés d'abeilles</h3>
             </div>
+            <h3>Qu'est-ce qui vous conviendrait</h3>
+            <div class="productsList">
+                <a href="" class="product">
+                    <img src="./Images/Golder.jfif" alt="Golder" width="400" height="400">
+                    <h3>Golder</h3>
+                    <span>Grande décoration pour les clés plaquées or foncé. Poids: 200 grammes. Prix: 10 euros</span>
+                </a>
+                <a href="" class="product">
+                    <img src="./Images/MoonlightBee.jfif" alt="Moonlight Bee" width="400" height="400">
+                    <h3>Moonlight Bee</h3>
+                    <span>Porte-clés brillant avec de nombreux détails. Vous pouvez donner à la place d'une bague. Poids: 100 grammes. Prix: 14 euros.</span>
+                </a>
+                <a href="" class="product">
+                    <img src="./Images/EasyaLux.jfif" alt="Easya Lux" width="400" height="400">
+                    <h3>Easya Lux</h3>
+                    <span>Notre nouvelle série Easyya vous propose un porte-clés aux sequins éblouissants. Poids: 100 grammes. Prix: 14 euros.</span>
+                </a>
+                <a href="" class="product">
+                    <img src="./Images/HoneyWork.jfif" alt="HoneyWork" width="400" height="400">
+                    <h3>HoneyWork</h3>
+                    <span></span>
+                </a>
+                <a href="" class="product">
+                    <img src="./Images/Keyzzz.jfif" alt="Keyzzz" width="400" height="400">
+                    <h3>Keyzzz</h3>
+                    <span></span>
+                </a>
+                <a href="" class="product">
+                    <img src="./Images/Flying.jpg" alt="Flying" width="400" height="400">
+                    <h3>Flying</h3>
+                    <span></span>
+                </a>
+            </div>
+            <h3>Vous souhaitez passer une commande spéciale ?</h3>
+            <a href="" class="order">Soumettez votre candidature</a>
         </main>
+        <footer id="footer">
+            <div id="footerVerticals">
+                <ul>
+                    <li><a href="">Licence</a></li>
+                    <li><a href="">Certificats</a></li>
+                    <li><a href="">Récompenses</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">Commentaires</a></li>
+                    <li><a href="">Laisser les commentaires</a></li>
+                    <li><a href="">Postes vacants</a></li>
+                </ul>
+            </div>
+            <div id="socialLinks">
+                <a href="https://www.youtube.com/channel/UCtAEB89Xjh2lh2g0NNQ3l9A" target="_blank" title="YouTube"><img src="./Images/UI/YT.png" alt="YouTube" width="50" height="50"></a>
+                <a href="https://www.instagram.com/mihbo2006/" target="_blank" title="Instagram"><img src="./Images/UI/Insta.png" alt="Instagram" width="50" height="50"></a>
+                <a href="https://www.facebook.com/profile.php?id=100036863237997" target="_blank" title="Facebook"><img src="./Images/UI/FB.png" alt="Facebook" width="50" height="50"></a>
+                <a href="https://web.telegram.org/z/" target="_blank" title="Telegram"><img src="./Images/UI/Tele.png" alt="Telegram" width="50" height="50"></a>
+                <a href="https://twitter.com/mihbo2006" target="_blank" title="Twitter"><img src="./Images/UI/Twitter.png" alt="Twitter" width="50" height="50"></a>
+                <a href="https://web.whatsapp.com/" target="_blank" title="WhatsApp"><img src="./Images/UI/WU.png" alt="WhatsApp" width="50" height="50"></a>
+                <a href="mailto:mihbo2006@gmail.com" target="_blank" title="Gmail"><img src="./Images/UI/Gmail.png" alt="Gmail" width="50" height="50"></a>
+            </div>
+            <span>Copyright © 2022 Bee's n' key's. Creator: Mihbo2006</span>
+        </footer>
     </body>
 </html>
