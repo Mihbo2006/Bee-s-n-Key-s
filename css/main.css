@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     outline: none;
+    box-sizing: border-box;
     font-family: Century Gothic, sans-serif;
 }
 header{
@@ -104,36 +105,43 @@ nav > a:hover{
     height: 100%;
     z-index: -1;
 }
+body{
+    background: rgb(255, 223, 174);
+}
 main{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background: rgb(255, 223, 174);
 }
 .productsList{
-    margin-top: 100px;
+    margin-top: 200px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 }
 .product{
     margin: 10px;
+    margin-bottom: 100px;
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     text-align: center;
+    min-height: 400px;
     color: white;
     background: rgb(255, 153, 0);
     border-radius: 50px;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3),
     inset -2px -2px 5px rgba(0, 0, 0, 0.3),
     inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+    transition: all 0.5s;
+}
+.product:hover{
+    transform: scale(1.2);
 }
 .product > img{
     margin-bottom: 10px;
@@ -141,9 +149,10 @@ main{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 .product span{
-    max-width: 400px;
+    max-width: 300px;
 }
 .order{
+    margin: 20px;
     padding: 10px;
     color: white;
     background: rgb(180, 0, 0);
@@ -162,21 +171,75 @@ main{
     width: 100%;
     height: 100%;
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.541);
     z-index: 9999;
 }
 .orderPopup{
-    width: 40%;
+    padding: 20px;
+    width: 25%;
+    border-radius: 50px;
+    color: white;
+    background: rgb(255, 68, 0);
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+.orderPopup form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
+.orderPopup form input[type="text"]{
+    margin: 5px;
+    padding: 10px;
+    background: rgb(255, 68, 0);
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+.orderPopup form input[type="submit"]{
+    padding: 10px;
+    color: white;
+    background: rgb(255, 153, 0);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.orderPopup form input[type="submit"]:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+.orderPopup input[value="Annuler"]{
+    color: white;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    background: rgb(180, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.orderPopup input[value="Annuler"]:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
 footer{
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;

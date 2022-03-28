@@ -12,11 +12,14 @@
             <div class="orderPopup">
                 <form action="post">
                     <h3>Commander un porte-clés</h3>
-                    <input type="text" placeholder="Votre e-mail">
-                    <input type="text" placeholder="Votre numéro de téléphone">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Numéro de téléphone">
                     <input type="text" placeholder="Votre adresse">
                     <input type="text" placeholder="Code postal">
-                    <input type="submit" value="Vérifier">
+                    <div>
+                        <input type="submit" value="Vérifier">
+                        <input type="button" value="Annuler" class="closePopup">
+                    </div>
                 </form>
             </div>
         </div>
@@ -41,7 +44,7 @@
                 <script>
                     window.addEventListener("scroll", function(){
                         var nav = document.querySelector("nav");
-                        nav.classList.toggle("scrolled", window.scrollY > 0);
+                        nav.classList.toggle("scrolled", window.scrollY > 300);
                     });
                 </script>
             </nav>
@@ -51,53 +54,62 @@
                 <img src="./Images/HomeScreen.jpg">
                 <h3>Bienvenue dans notre ferme de porte-clés d'abeilles</h3>
             </div>
-            <h3>Qu'est-ce qui vous conviendrait</h3>
             <div class="productsList">
                 <a href="" class="product">
-                    <img src="./Images/Golder.jfif" alt="Golder" width="400" height="400">
+                    <img src="./Images/Golder.jfif" alt="Golder" width="300" height="300">
                     <h3>Golder</h3>
-                    <span>Grande décoration pour les clés plaquées or foncé. Poids: 200 grammes. Prix: 10 euros</span>
+                    <span>Grande décoration pour les clés plaquées or foncé. Assez moderne, remarquez. Poids: 200 grammes. Prix: 10 euros</span>
                 </a>
                 <a href="" class="product">
-                    <img src="./Images/MoonlightBee.jfif" alt="Moonlight Bee" width="400" height="400">
+                    <img src="./Images/MoonlightBee.jfif" alt="Moonlight Bee" width="300" height="300">
                     <h3>Moonlight Bee</h3>
                     <span>Porte-clés brillant avec de nombreux détails. Vous pouvez donner à la place d'une bague. Poids: 100 grammes. Prix: 14 euros.</span>
                 </a>
                 <a href="" class="product">
-                    <img src="./Images/EasyaLux.jfif" alt="Easya Lux" width="400" height="400">
+                    <img src="./Images/EasyaLux.jfif" alt="Easya Lux" width="300" height="300">
                     <h3>Easya Lux</h3>
                     <span>Notre nouvelle série Easyya vous propose un porte-clés aux sequins éblouissants. Poids: 100 grammes. Prix: 14 euros.</span>
                 </a>
                 <a href="" class="product">
-                    <img src="./Images/HoneyWork.jfif" alt="HoneyWork" width="400" height="400">
+                    <img src="./Images/HoneyWork.jfif" alt="HoneyWork" width="300" height="300">
                     <h3>HoneyWork</h3>
-                    <span></span>
+                    <span>Avec ce porte-clés, vous serez associé à une personne travailleuse. Poids: 90 grammes. Prix: 5 euros.</span>
                 </a>
                 <a href="" class="product">
-                    <img src="./Images/Keyzzz.jfif" alt="Keyzzz" width="400" height="400">
+                    <img src="./Images/Keyzzz.jfif" alt="Keyzzz" width="300" height="300">
                     <h3>Keyzzz</h3>
-                    <span></span>
+                    <span>Que peut-on dire ici? Juste un beau porte-clés. Poids: 80 grammes. Prix: 5 euros.</span>
                 </a>
                 <a href="" class="product">
-                    <img src="./Images/Flying.jpg" alt="Flying" width="400" height="400">
-                    <h3>Flying</h3>
-                    <span></span>
+                    <img src="./Images/Flying.jpg" alt="I belive, I can fly" width="300" height="300">
+                    <h3>I belive, I can fly</h3>
+                    <span>Regardez et ne le manquez pas, sinon il s'envolera. Poids : 20 grammes. Prix: 2 euros.</span>
                 </a>
             </div>
             <h3>Vous souhaitez passer une commande spéciale ?</h3>
             <a href="" class="order">Soumettez votre candidature</a>
         </main>
+        <script>
+            $('.order').click(function(e) {
+                e.preventDefault();
+                $('.popupBG').css({'display': 'flex'});
+                $('.popupBG').fadeIn(800);
+            });
+            $('.closePopup').click(function() {
+                $('.popupBG').fadeOut(800);
+            });
+        </script>
         <footer id="footer">
             <div id="footerVerticals">
                 <ul>
-                    <li><a href="">Licence</a></li>
-                    <li><a href="">Certificats</a></li>
-                    <li><a href="">Récompenses</a></li>
+                    <li><a href="developing.html">Licence</a></li>
+                    <li><a href="developing.html">Certificats</a></li>
+                    <li><a href="developing.html">Récompenses</a></li>
                 </ul>
                 <ul>
-                    <li><a href="">Commentaires</a></li>
-                    <li><a href="">Laisser les commentaires</a></li>
-                    <li><a href="">Postes vacants</a></li>
+                    <li><a href="developing.html">Commentaires</a></li>
+                    <li><a href="developing.html">Laisser les commentaires</a></li>
+                    <li><a href="developing.html">Postes vacants</a></li>
                 </ul>
             </div>
             <div id="socialLinks">
