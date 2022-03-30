@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/main.css">
+        <script src="./js/jquery-3.6.0.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="./Images/UI/Logo.ico">
+        <title>Bee's n' key's|A propos de nous</title>
+    </head>
+    <body>
+        <div class="popupBG">
+            <div class="orderPopup">
+                <form action="post">
+                    <h3>Commander un porte-clés</h3>
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Numéro de téléphone">
+                    <input type="text" placeholder="Votre adresse">
+                    <input type="text" placeholder="Code postal">
+                    <div>
+                        <input type="submit" value="Vérifier">
+                        <input type="button" value="Annuler" class="closePopup">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <img src="./Images/UI/Logo.png" id="logo" alt="BZZ" width="45" height="45">
+                <div id="bzz"><span>Bzzzzz...</span></div>
+                <a href="./index.html">Domicile</a>
+                <a href="./products.html">Des produits</a>
+                <a href="#footer">Contact</a>
+                <a href="./about.html" id="current">A propos de nous</a>
+                <script>
+                    $('#logo').click(function(e) {
+                        e.preventDefault();
+                        $('#bzz').css({'display': 'flex'});
+                        $('#bzz').fadeIn(500);
+                        setTimeout(function(){
+                            $('#bzz').fadeOut(500);
+                        }, 3000);
+                    });
+                </script>
+                <script>
+                    window.addEventListener("scroll", function(){
+                        var nav = document.querySelector("nav");
+                        nav.classList.toggle("scrolled", window.scrollY > 300);
+                    });
+                </script>
+            </nav>
+        </header>
+        <main>
+            <div class="screen">
+                <img src="./Images/About.jfif">
+                <h3>À propos de nous</h3>
+            </div>
+            <div class="description">
+                <h3>Qui sommes nous?</h3>
+                <p>Nous sommes une entreprise française qui vend des porte-clés de style abeille.</p>
+            </div>
+            <div class="description">
+                <h3>Où puis-je acheter vos articles?</h3>
+                <p>Vous pouvez acheter nos produits n'importe où: dans les magasins en ligne, sur notre site Web, par téléphone. 
+                    Nous travaillons dans tous les pays du monde.</p>
+            </div>
+            <div class="description">
+                <h3>Quels porte-clés puis-je acheter chez vous?</h3>
+                <p>Puisque le site est en test alpha, allez sur la page principale et vous trouverez plusieurs produits, puis appelez 
+                    notre téléphone et commandez le produit.</p>
+            </div>
+            <div class="description">
+                <h3>Puis-je passer une commande personnelle?</h3>
+                <p>Bien sûr, vous pouvez simplement cliquer sur ce bouton, vous inscrire et décrire ce que vous aimeriez recevoir.</p>
+                <a href="" class="order">Soumettez votre candidature</a>
+                <script>
+                    $('.order').click(function(e) {
+                        e.preventDefault();
+                        $('.popupBG').css({'display': 'flex'});
+                        $('.popupBG').fadeIn(800);
+                    });
+                    $('.closePopup').click(function() {
+                        $('.popupBG').fadeOut(800);
+                    });
+                </script>
+            </div>
+            <div class="description">
+                <h3>Que fait-on de nos revenus?</h3>
+                <p>Nous ne sommes pas gourmands. Soit dit en passant, nous consacrons 55% de nos revenus à des œuvres caritatives.</p>
+            </div>
+        </main>
+            <footer id="footer">
+                <div id="footerVerticals">
+                    <ul>
+                        <li><a href="developing.html">Licence</a></li>
+                        <li><a href="developing.html">Certificats</a></li>
+                        <li><a href="developing.html">Récompenses</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="developing.html">Commentaires</a></li>
+                        <li><a href="developing.html">Laisser les commentaires</a></li>
+                        <li><a href="developing.html">Postes vacants</a></li>
+                    </ul>
+                </div>
+                <div id="socialLinks">
+                    <a href="https://www.youtube.com/channel/UCtAEB89Xjh2lh2g0NNQ3l9A" target="_blank" title="YouTube"><img src="./Images/UI/YT.png" alt="YouTube" width="50" height="50"></a>
+                    <a href="https://www.instagram.com/mihbo2006/" target="_blank" title="Instagram"><img src="./Images/UI/Insta.png" alt="Instagram" width="50" height="50"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100036863237997" target="_blank" title="Facebook"><img src="./Images/UI/FB.png" alt="Facebook" width="50" height="50"></a>
+                    <a href="https://web.telegram.org/z/" target="_blank" title="Telegram"><img src="./Images/UI/Tele.png" alt="Telegram" width="50" height="50"></a>
+                    <a href="https://twitter.com/mihbo2006" target="_blank" title="Twitter"><img src="./Images/UI/Twitter.png" alt="Twitter" width="50" height="50"></a>
+                    <a href="https://web.whatsapp.com/" target="_blank" title="WhatsApp"><img src="./Images/UI/WU.png" alt="WhatsApp" width="50" height="50"></a>
+                    <a href="mailto:mihbo2006@gmail.com" target="_blank" title="Gmail"><img src="./Images/UI/Gmail.png" alt="Gmail" width="50" height="50"></a>
+                </div>
+                <span>Copyright © 2022 Bee's n' key's. Creator: Mihbo2006</span>
+        </footer>
+    </body>
+</html>

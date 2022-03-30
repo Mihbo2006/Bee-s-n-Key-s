@@ -1,0 +1,11 @@
+#mainInfo{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#textInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
